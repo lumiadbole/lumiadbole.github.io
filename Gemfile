@@ -3,4 +3,12 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem "jekyll"
+group :jekyll_plugins do
+#    gem "github-pages"
+    gem "jekyll-feed", "~> 0.12"
+    gem "jekyll-remote-theme"
+  end
+
+gem "no-style-please"
+
+gem "webrick", "~> 1.8"
