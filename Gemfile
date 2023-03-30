@@ -9,6 +9,6 @@ group :jekyll_plugins do
     gem "jekyll-remote-theme"
   end
 
-gem "no-style-please"
+  gem 'jekyll-theme-midnight', '~> 0.2.0'
 
 gem "webrick", "~> 1.8"
