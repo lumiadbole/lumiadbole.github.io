@@ -5,7 +5,7 @@ source "https://rubygems.org"
 gem "kramdown-parser-gfm"
 
 group :jekyll_plugins do
-    #    gem "github-pages"
+        gem "github-pages"
         gem "jekyll-feed", "~> 0.12"
         gem "jekyll-remote-theme"
       end
