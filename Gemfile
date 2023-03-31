@@ -2,13 +2,13 @@
 
 source "https://rubygems.org"
 
-# gem "rails"
+gem "kramdown-parser-gfm"
+
 group :jekyll_plugins do
-#    gem "github-pages"
-    gem "jekyll-feed", "~> 0.12"
-    gem "jekyll-remote-theme"
-  end
-
-  gem 'jekyll-theme-midnight', '~> 0.2.0'
-
+    #    gem "github-pages"
+        gem "jekyll-feed", "~> 0.12"
+        gem "jekyll-remote-theme"
+      end
 gem "webrick", "~> 1.8"
+
+gemspec

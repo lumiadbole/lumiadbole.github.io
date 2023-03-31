@@ -1,3 +1,11 @@
+PATH
+  remote: .
+  specs:
+    no-style-please (0.4.7)
+      jekyll (~> 3.9.0)
+      jekyll-feed (~> 0.15.1)
+      jekyll-seo-tag (~> 2.7.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,15 +50,13 @@ GEM
       listen (~> 3.0)
     kramdown (2.4.0)
       rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     liquid (4.0.4)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    no-style-please (0.4.7)
-      jekyll (~> 3.9.0)
-      jekyll-feed (~> 0.15.1)
-      jekyll-seo-tag (~> 2.7.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (5.0.1)
@@ -74,7 +80,8 @@ PLATFORMS
 DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-remote-theme
-  no-style-please
+  kramdown-parser-gfm
+  no-style-please!
   webrick (~> 1.8)
 
 BUNDLED WITH
