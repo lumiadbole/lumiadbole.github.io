@@ -15,14 +15,14 @@ entries:
     post_list:
       limit: 5
       show_more: true
-      show_more_text: See archive...
+      show_more_text: look deeper into the archives...
       show_more_url: archive.html
 
-  - title: posts by category
+  - title: puzzles
     post_list:
       category: puzzles
       show_more: true
-      show_more_text: See more posts...
+      show_more_text: look for more ancient puzzles...
       show_more_url: puzzles.html
 
   - title: rss
