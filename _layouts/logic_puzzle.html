@@ -2,5 +2,5 @@
 layout: post
 ---
 
-{{ content }} {%-include puzzlink_link.html puzurl='{{ page.puzurl }}'
-picture='{{ page.picture }}'%}
+{%capture puzz_url %} {{page.puzurl}} {%endcapture%} {{ content }} {%-include
+puzzlink_link.html puzurl=puzz_url %}
