@@ -3,4 +3,6 @@
     src="{{ '/assets/img/' | prepend: site.baseurl | replace: 'http://', 'https://' }}{{ include.picture }}"
   />
 </a>
-<a href="{{ include.puzurl}}" target="_blank"> solve on puzz.link </a>
+<a href="{{ include.puzurl}}" target="_blank">
+  solve on {{include.puzzsite}}
+</a>
