@@ -2,18 +2,21 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta name="color-scheme" content="light dark" />
+  <script>
+    const colorScheme = localStorage.getItem("color-scheme") || "light-mode";
+  </script>
   <title>
-    {%- if page.title -%}
-      {{ page.title }}
-    {%- else -%}
-      {{ site.title }}
-    {%- endif -%}
+    {%- if page.title -%} {{ page.title }} {%- else -%} {{ site.title }} {%-
+    endif -%}
   </title>
 
-  {%-seo title=false-%}
-  {%-feed_meta-%}
+  {%-seo title=false-%} {%-feed_meta-%}
 
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="{{ site.favicon | relative_url }}"
+  />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
 </head>

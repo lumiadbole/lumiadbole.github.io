@@ -1,12 +1,11 @@
 // -------------- THEME SWITCHER -------------- //
-@mixin dark-appearance {
-  filter: invert(1);
-  img {
-    filter: invert(1);
-
-    &.ioda {
-      filter: invert(0);
-    }
+/*@mixin dark-appearance {
+  .dark-mode {
+    --color-background: teal;
+    --color-default: aquamarine;
+    --color-accent-1: #006060;
+    --color-accent-2: violet;
+    --color-accent-3: indigo;
   }
 }
 
@@ -18,15 +17,51 @@ body[a="dark"] {
   body[a="auto"] {
     @include dark-appearance;
   }
-}
+}*/
 // -------------------------------------------- //
 
 // bg color is also needed in html in order to
 // block body's background propagation
 // see: https://stackoverflow.com/a/61265706
+:root {
+  --color-background: #f5aaf5;
+  --color-default: indigo;
+  --color-accent-1: lavenderblush;
+  --color-accent-2: #006666;
+  --color-accent-3: aquamarine;
+  --color-link: blue;
+  --color-visited: darkmagenta;
+}
+.dark-mode {
+  --color-background: #006666;
+  --color-default: aquamarine;
+  --color-accent-1: blue;
+  --color-accent-2: #f5aaf5;
+  --color-accent-3: indigo;
+  --color-link: lavenderblush;
+  --color-visited: paleturquoise;
+  img:not([src$=".svg"]) {
+    filter: brightness(90%);
+  }
+}
+.btn {
+  position: fixed;
+  padding: 10px 16px;
+  background-color: var(--color-accent-2);
+  color: var(--color-accent-3);
+  font-size: 18px;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+}
+/*@media (prefers-color-scheme: dark) {
+  img:not([src$=".svg"]) {
+    filter: brightness(70%);
+  }
+}*/
 html,
 body {
-  background: rgb(255, 173, 255);
+  background: var(--color-background);
 }
 
 html {
@@ -34,7 +69,7 @@ html {
 }
 
 body {
-  color: rgb(75, 0, 119);
+  color: var(--color-default);
   font-family: monospace;
   font-size: 16px;
   line-height: 1.4;
@@ -96,14 +131,14 @@ table {
 table,
 th,
 td {
-  border: thin solid black;
+  border: thin solid var(--color-default);
   border-collapse: collapse;
   padding: 0.4rem;
 }
 
 code {
-  color: rgb(255, 0, 221);
-  background: black;
+  color: var(--color-accent-1);
+  background: var(--color-default);
 }
 
 div.highlighter-rouge code {
@@ -112,10 +147,15 @@ div.highlighter-rouge code {
   white-space: pre-wrap;
   padding: 1rem;
 }
-
+a {
+  color: var(--color-link);
+}
+a:visited {
+  color: var(--color-visited);
+}
 blockquote {
   font-style: italic;
-  border: thin solid black;
+  border: thin solid var(--color-accent-2);
   padding: 1rem;
 
   p {
