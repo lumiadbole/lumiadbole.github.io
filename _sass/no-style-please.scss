@@ -48,8 +48,9 @@ body[a="dark"] {
   position: fixed;
   padding: 10px 16px;
   background-color: var(--color-accent-2);
+  font-family: monospace;
   color: var(--color-accent-3);
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   bottom: 0;
   left: 0;
