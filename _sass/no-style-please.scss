@@ -19,14 +19,14 @@ body[a="dark"] {
   }
 }*/
 // -------------------------------------------- //
-
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&family=Share+Tech+Mono&display=swap");
 // bg color is also needed in html in order to
 // block body's background propagation
 // see: https://stackoverflow.com/a/61265706
 :root {
   --color-background: #f5aaf5;
   --color-default: indigo;
-  --color-accent-1: lavenderblush;
+  --color-accent-1: mistyrose;
   --color-accent-2: #006666;
   --color-accent-3: aquamarine;
   --color-link: blue;
@@ -35,7 +35,7 @@ body[a="dark"] {
 .dark-mode {
   --color-background: #006666;
   --color-default: aquamarine;
-  --color-accent-1: blue;
+  --color-accent-1: #0055aa;
   --color-accent-2: #f5aaf5;
   --color-accent-3: indigo;
   --color-link: lavenderblush;
@@ -163,7 +163,11 @@ blockquote {
     margin: 0;
   }
 }
-
+.bootes {
+  font-family: "Share Tech Mono", monospace;
+  color: var(--color-accent-2);
+  background-color: var(--color-accent-1);
+}
 img {
   max-width: 100%;
   display: block;
