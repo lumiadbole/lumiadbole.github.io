@@ -55,6 +55,28 @@ body[a="dark"] {
   bottom: 0;
   left: 0;
 }
+.collapsible {
+  background-color: var(--color-accent-3);
+  color: var(--color-accent-2);
+  padding: 10px 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: monospace;
+  font-size: 15px;
+  cursor: pointer;
+}
+.active,
+.collapsible:hover {
+  background-color: var(--color-accent-3);
+}
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: var(--color-accent-1);
+}
 /*@media (prefers-color-scheme: dark) {
   img:not([src$=".svg"]) {
     filter: brightness(70%);
