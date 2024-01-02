@@ -1,0 +1,48 @@
+<style>
+  .grid {
+    margin: 1em auto;
+    text-align: center;
+    table-layout: fixed;
+  }
+  form {
+    margin: 1em auto;
+    display: flex;
+    flex-direction: row;
+    width: min-content;
+    align-items: center;
+  }
+  #feedback {
+    font-weight: bold;
+    height: 1rem;
+    text-align: center;
+  }
+  label,
+  input {
+    margin-right: 0.5rem;
+  }
+  form button,
+  form input {
+    border: none;
+    font: inherit;
+    height: 2rem;
+  }
+  form input {
+    padding: 0px 4px;
+  }
+</style>
+
+<div class="center">
+  <form id="form">
+    <label for="answer">guess:</label>
+    <input type="text" id="answer" />
+    <button type="submit">check</button>
+  </form>
+  <p class="color-default" id="feedback"></p>
+</div>
+
+<script src="/assets/js/answerchecker.js"></script>
+<script>
+  ANSWERS = "{{include.answerhashes}}";
+  PARTIALS = "{{include.partialhashes}}";
+  PARTMESSAGE = "{{include.partmessage}}";
+</script>
