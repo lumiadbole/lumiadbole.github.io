@@ -23,7 +23,7 @@ gid("form").onsubmit = async function submit(e) {
     .normalize("NFD")
     .replace(/[^a-z]/g, "");
   const hashed = await hash(normalized);
-  message = ANSWERS.includes(hashed)
+  const message = ANSWERS.includes(hashed)
     ? normalized.concat(" is correct!")
     : normalized.concat(" is incorrect.");
   if (PARTIALS.includes(hashed)) {
