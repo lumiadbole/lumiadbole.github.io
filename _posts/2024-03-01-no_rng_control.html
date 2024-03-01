@@ -1,0 +1,556 @@
+---
+category: si_theory
+layout: post
+title: if you don't control rng, part a
+---
+
+<h2>intro</h2>
+
+<p>so my gf sent me a meme:</p>
+
+<!--insert image here-->
+<img src="/assets/img/stopcontrollingrng.png" />
+
+<p>i was like "fine"</p>
+
+<p>
+  here are some optimizations that don't involve controlling what cards you draw
+</p>
+
+<h2>section 1: presence</h2>
+
+<button type="button" class="collapsible">
+  max number of prolifs that green can give out
+</button>
+<div class="content">
+  <p>spirits:</p>
+  <ul>
+    <li>green</li>
+    <li>fractured</li>
+    <li>might</li>
+    <li>downpour</li>
+    <li>any memory</li>
+    <li>any other spirit that can give green 1 energy</li>
+  </ul>
+  <p>spirit phases:</p>
+  <ul>
+    <li>
+      green adds presence from top track, gains a power card and 3 energy, and
+      plays prolif (3 energy left)
+    </li>
+    <li>
+      fractured takes the sun growth option, gains 3 time from bottom track, and
+      plays past returns + blur
+    </li>
+    <li>
+      might adds presence from top track, gains 2 energy, and plays rituals
+    </li>
+    <li>downpour does anything it wants and plays abundance</li>
+    <li>memory does anything it wants and plays teachings</li>
+    <li>the other spirit does a spirit phase that can give green 1 energy</li>
+  </ul>
+  <p>fast:</p>
+  <ul>
+    <li>green gives out a prolif <b>(1)</b></li>
+    <li>the last spirit gives green an energy</li>
+    <li>memory gives fractured 1 air</li>
+    <li>fractured slips prolif</li>
+    <li>green gives out a prolif <b>(2)</b></li>
+    <li>fractured slips prolif</li>
+    <li>green gives out a prolif <b>(3)</b></li>
+    <li>fractured slips prolif</li>
+    <li>green gives out a prolif <b>(4)</b></li>
+    <li>might plays draw, then gives green gift of strength</li>
+    <li>downpour gives green abundance</li>
+    <li>green repeats prolif twice <b>(6)</b></li>
+  </ul>
+</div>
+
+<p>
+  snek has a presence cap. how many presence can we take off its tracks on turn
+  1?
+</p>
+
+<button type="button" class="collapsible">
+  max number of presence that snek can add
+</button>
+<div class="content">
+  <p>spirits:</p>
+  <ul>
+    <li>green</li>
+    <li>fractured</li>
+    <li>might</li>
+    <li>downpour</li>
+    <li>mentor</li>
+    <li>snek</li>
+  </ul>
+  <p>
+    additionally, snek needs to be on a board whose land 5 is within range 7 of
+    a land with blight and invaders. this is probably not hard to do, but the
+    land in question depends on the initial explore. fractured also needs to
+    have a setup presence within range 5 of that land. let's call that land the
+    "blurring land"
+  </p>
+  <p>spirit phases:</p>
+  <ul>
+    <li>
+      green adds presence from top track, gains a power card and 3 energy, and
+      plays prolif (3 energy left)
+    </li>
+    <li>
+      fractured takes the sun growth option, gains 3 time from bottom track,
+      moves presence adjacent to the blurry land, and plays past returns + blur
+    </li>
+    <li>
+      might adds presence from top track, gains 2 energy, and plays rituals
+    </li>
+    <li>downpour does anything it wants and plays abundance</li>
+    <li>
+      mentor adds a presence from bottom track and plays teachings + share
+      secrets
+    </li>
+    <li>
+      snek adds a presence to a land within range 5 of the blurring land, and
+      plays absorb
+    </li>
+  </ul>
+  <p>fast:</p>
+  <ul>
+    <li>mentor gives fractured study to play, and prepares plant</li>
+    <li>
+      mentor prepares plant and gifts snek earth plant plant with teachings
+    </li>
+    <li>green prolifs snek <b>(2)</b></li>
+    <li>snek absorbs green</li>
+    <li>fractured slips prolif</li>
+    <li>green prolifs snek <b>(3)</b></li>
+    <li>fractured slips prolif</li>
+    <li>green prolifs snek <b>(4)</b></li>
+    <li>fractured slips prolif</li>
+    <li>green prolifs snek <b>(5)</b></li>
+    <li>might plays draw, then gives green gift of strength</li>
+    <li>downpour gives green abundance</li>
+    <li>green prolifs snek <b>(6)</b></li>
+    <li>
+      fractured blurs the blurring land, cascading blight to destroy 2 of snek's
+      presence
+    </li>
+    <li>green prolifs snek <b>(7)</b></li>
+  </ul>
+  <p>in slow, snek prolifs itself with its left innate <b>(8)</b></p>
+  <p>notes:</p>
+  <ul>
+    <li>
+      this is enough for snek to have 4 card plays or 6 energy income on turn 2.
+    </li>
+    <li>
+      this also works for locus since it starts with a free presence off tracks
+      instead of the prolif from left innate.
+    </li>
+    <li>
+      if blur can cascade 1 more blight, snek can add another presence next turn
+      and be on 5 card plays.
+    </li>
+  </ul>
+</div>
+
+<p>
+  regrowth green has a lot of destroyed presence. how much presence can it have
+  on the board (from tracks or destroyed pool) on turn 1?
+</p>
+
+<button type="button" class="collapsible">
+  max number of regrowth presence on the island
+</button>
+<div class="content">
+  <p>
+    strategy: abundance is very good at restoring regrowth's destroyed presence,
+    and it also gives repeats and energy, so we play this as much as possible
+  </p>
+  <p>spirits:</p>
+  <ul>
+    <li>regrowth</li>
+    <li>fractured</li>
+    <li>might</li>
+    <li>downpour</li>
+    <li>mentor</li>
+    <li>tree</li>
+  </ul>
+  <p>spirit phases:</p>
+  <ul>
+    <li>
+      regrowth adds presence from top track, gains a power card and 3 energy,
+      and plays overgrow (2 energy left) <b>(3)</b>
+    </li>
+    <li>
+      fractured takes the sun growth option, gains 3 time from bottom track, and
+      plays past returns + blur
+    </li>
+    <li>
+      might adds presence from top track, gains 2 energy, and plays rituals
+    </li>
+    <li>downpour adds 2 presence from top track and plays abundance</li>
+    <li>
+      mentor adds a presence from bottom track and plays teachings + share
+      secrets
+    </li>
+    <li>tree does anything and plays resilient power</li>
+  </ul>
+  <p>fast:</p>
+  <ul>
+    <li>mentor gives fractured study to play, and prepares air water</li>
+    <li>mentor prepares plant and gives regrowth water plant with teachings</li>
+    <li>
+      downpour gains 2 energy with its 4 water + 1 more with its right innate
+    </li>
+    <li>might plays draw, then gives downpour gift of strength</li>
+    <li>
+      downpour gives regrowth abundance, regrowth adds a destroyed presence
+      <b>(4)</b>
+    </li>
+    <li>
+      downpour repeats abundance, giving regrowth 2 energy and adding a
+      destroyed presence (regrowth has 4 energy) <b>(5)</b>
+    </li>
+    <li>fractured slips downpour to replay abundance</li>
+    <li>
+      downpour gives regrowth abundance, regrowth adds a destroyed presence
+      <b>(6)</b>
+    </li>
+    <li>fractured slips downpour to replay abundance</li>
+    <li>
+      downpour gives regrowth 2 energy, regrowth adds a destroyed presence
+      (regrowth has 6 energy)
+      <b>(7)</b>
+    </li>
+    <li>fractured slips downpour to replay abundance</li>
+    <li>
+      downpour gives regrowth abundance, regrowth adds a destroyed presence
+      <b>(8)</b>
+    </li>
+    <li>
+      regrowth adds 4 presence with overgrowth (original use + 3 abundances)
+      <b>(12)</b>
+    </li>
+  </ul>
+  <p>
+    in slow, tree gives regrowth resilient power and regrowth uses its right
+    innate <b>(14)</b>
+  </p>
+</div>
+
+<p>incarna are usually presence. how many incarna can we empower on turn 1?</p>
+
+<button type="button" class="collapsible">
+  max number of incarna empowers
+</button>
+<div class="content">
+  <p>how to empower each incarna, from easiest to hardest:</p>
+  <ul>
+    <li>eeb: just take the growth</li>
+    <li>
+      tree: take growth 2, play blooming, repeat blooming. alternatively, move
+      incarna into a land with vitality, add another vitality, and somehow have
+      or make a sacred site to add a third vitality in the slow. this can be
+      done by a second card play to play resilient power, or a presence
+      movement, or a prolif.
+    </li>
+    <li>
+      voice: take growth 3, play turmoil's touch + frightful keening, either
+      receive elemental support for moon+air or receive 1 card play to play
+      exhale
+    </li>
+    <li>boddys: add 4 presence from top track</li>
+    <li>locus: add 6 presence</li>
+  </ul>
+  <p>
+    it's pretty easy to get 3 empowers with fractured+green+mentor, but it isn't
+    possible to get 4. here's the proof:
+  </p>
+  <p>
+    we need 2 non-incarna spirits that can give out 3 prolifs, a card play, and
+    a repeat. the only spirit that can give out multiple prolifs is green, and
+    the only spirit that can increase that to 3 prolifs is fractured.
+  </p>
+  <p>
+    the only incarna spirit that can give out any of these 3 is locus, which
+    needs 5 prolifs, too many for fractured and green to give out. (fractured
+    can gain at most 3 time, which is at most 3 repeats of prolif)
+  </p>
+  <p>
+    otherwise, fractured needs to give 2 slips to green, 1 to voice, and 1 to
+    tree, and fractured does not have enough time for all of this.
+  </p>
+</div>
+
+<h2>section 2: power cards</h2>
+
+<p>
+  how many cards can you remove from the power card decks on turn 1? (i say
+  "remove from each deck" because i'm including putting into days that never
+  were)
+</p>
+
+<button type="button" class="collapsible">minor powers</button>
+<div class="content">
+  <p>
+    strategy: play boon of reimagining as many times as possible. playing it on
+    fractured removes 3 minors from the deck, 4 if fractured still has unique
+    powers remaining in hand or discard.
+  </p>
+  <p>spirits:</p>
+  <ul>
+    <li>starlight</li>
+    <li>fractured</li>
+    <li>sparking</li>
+    <li>downpour</li>
+    <li>mentor</li>
+    <li>nourishing</li>
+  </ul>
+  <p>spirit phases:</p>
+  <ul>
+    <li>
+      starlight does its most standard opening (1 energy remaining) <b>(1)</b>
+    </li>
+    <li>fractured takes growth 3, plays past returns + blur <b>(5)</b></li>
+    <li>sparking reclaims, plays harbingers + lightning's boon <b>(6)</b></li>
+    <li>downpour gains a minor, plays abundance <b>(7)</b></li>
+    <li>mentor gains a minor, plays share secrets + teachings <b>(9)</b></li>
+    <li>
+      nourishing gains major+minor, plays rituals (0 energy remaining)
+      <b>(11)</b>
+    </li>
+  </ul>
+  <p>fast:</p>
+  <ul>
+    <li>mentor prepares air and gives fractured moon air with teachings</li>
+    <li>sparking innate to mentor <b>(13)</b></li>
+    <li>sparking lightning's boons starlight</li>
+    <li>downpour abundances starlight</li>
+    <li>
+      starlight shapes itself and gains 3 energy (fast from lightning's boon, 4
+      energy remaining) <b>(14)</b>
+    </li>
+    <li>
+      starlight reimaginings fractured, fractured forgets pts (fast from slip)
+      <b>(18)</b>
+    </li>
+    <li>
+      fractured slips starlight, starlight uses reimagining fast and replays it
+      (starlight has 3 energy left)
+    </li>
+    <li>
+      starlight reimaginings fractured, fractured forgets stasis (fast from
+      slip) <b>(22)</b>
+    </li>
+    <li>
+      fractured slips starlight, starlight uses reimagining fast and replays it
+      (starlight has 2 energy left)
+    </li>
+    <li>
+      starlight reimaginings fractured, fractured forgets a random minor (fast
+      from slip) <b>(25)</b>
+    </li>
+    <li>
+      fractured slips starlight, starlight uses reimagining fast and replays it
+      (starlight has 1 energy left)
+    </li>
+    <li>
+      starlight reimaginings fractured, fractured forgets a random minor (fast
+      from lightning's boon) <b>(28)</b>
+    </li>
+    <li>
+      starlight reimaginings nourishing, nourishing forgets a unique (repeat
+      from abundance, 0 energy remaining) <b>(30)</b>
+    </li>
+    <li>mentor gives nourishing memes to play with its newly gained energy</li>
+    <li>nourishing gives starlight gift of strength</li>
+    <li>
+      starlight reimaginings mentor, mentor forgets study (repeat from gift of
+      strength) <b>(33)</b>
+    </li>
+  </ul>
+  <p>in slow, nourishing gives memes to mentor <b>(35)</b></p>
+</div>
+
+<button type="button" class="collapsible">major powers</button>
+<div class="content">
+  <p>
+    strategy: having more energy tends to make gaining majors easier, so the
+    main power to repeat will be one that gives both majors and energy, i.e.
+    boon of growing power
+  </p>
+  <p>spirits:</p>
+  <ul>
+    <li>keeper</li>
+    <li>fractured</li>
+    <li>mud</li>
+    <li>downpour</li>
+    <li>mentor</li>
+    <li>nourishing</li>
+  </ul>
+  <p>spirit phases:</p>
+  <ul>
+    <li>
+      keeper gains 1 major, plays growing power (2 energy left) <b>(1)</b>
+    </li>
+    <li>
+      fractured gains 1 major with moon growth, takes 1 time from top track,
+      plays blur + stasis + past returns (0 energy left) <b>(7)</b>
+    </li>
+    <li>mud gains a major and plays exaltation (3 energy left) <b>(8)</b></li>
+    <li>
+      downpour gains a major and plays abundance (1 energy left) <b>(9)</b>
+    </li>
+    <li>
+      mentor gains a major and plays share secrets + teachings (0 energy left)
+      <b>(11)</b>
+    </li>
+    <li>nourishing gains 2 energy and plays rituals (2 energy left)</li>
+  </ul>
+  <p>fast:</p>
+  <ul>
+    <li>
+      mentor gives memes to nourishing to repeat (nourishing has 0 energy left)
+    </li>
+    <li>nourishing gifts keeper strength</li>
+    <li>downpour abundances mud</li>
+    <li>
+      keeper boons mentor (fast from slip, mentor has 1 energy) <b>(13)</b>
+    </li>
+    <li>
+      fractured slips keeper, keeper uses boon and plays it again (keeper has 1
+      energy left)
+    </li>
+    <li>keeper boons mud (fast from slip, mud has 4 energy) <b>(14)</b></li>
+    <li>
+      fractured slips keeper, keeper uses boon and plays it again (keeper has 0
+      energy left)
+    </li>
+  </ul>
+  <p>slow:</p>
+  <ul>
+    <li>keeper boons fractured (fractured has 1 energy) <b>(16)</b></li>
+    <li>
+      keeper boons fractured (repeat from strength, fractured has 2 energy)
+      <b>(18)</b>
+    </li>
+    <li>nourishing memes fractured (fractured has 0 energy) <b>(20)</b></li>
+    <li>nourishing memes fractured (repeat from mentor) <b>(22)</b></li>
+    <li>
+      mud exaltations mentor (mud has 2 energy, mentor has 0) <b>(25) </b>
+    </li>
+    <li>
+      mud exaltations downpour (mud and downpour have 0 energy left) <b>(27)</b>
+    </li>
+  </ul>
+</div>
+
+<p>
+  dances up earthquakes can impend cards. how many can they impend on turn 1?
+</p>
+
+<button type="button" class="collapsible">impending cards</button>
+<div class="content">
+  <p>strategy: repeat flowing power or primordial deeps as much as possible</p>
+  <p>spirits:</p>
+  <ul>
+    <li>due</li>
+    <li>fractured</li>
+    <li>snek</li>
+    <li>sparking</li>
+    <li>mentor</li>
+    <li>downpour</li>
+  </ul>
+  <p>growths:</p>
+  <ul>
+    <li>
+      due gains a minor, impends their 2 cheapest cards (1 energy) <b>(2)</b>
+    </li>
+    <li>fractured takes sun growth, plays past returns + blur</li>
+    <li>snek gains 4 energy and plays flowing power</li>
+    <li>sparking gains 3 energy and plays all uniques except shatter</li>
+    <li>mentor does anything and plays share secrets + teachings</li>
+    <li>downpour does anything and plays abundance</li>
+  </ul>
+  <p>fast:</p>
+  <ul>
+    <li>mentor teaches fractured air</li>
+    <li>mentor gives due a card to impend <b>(3)</b></li>
+    <li>sparking lets due gain and impend a minor <b>(4)</b></li>
+    <li>downpour abundances snek</li>
+    <li>
+      snek flowing powers due, due impends their cheapest card (due has 2
+      energy) <b>(5)</b>
+    </li>
+    <li>
+      snek flowing powers due (abundance), due impends tremors with 1 energy
+      (due has 2 energy) <b>(6)</b>
+    </li>
+    <li>fractured slips snek to replay flowing power</li>
+    <li>
+      snek flowing powers due, due impends seismic energy with 2 energy (due has
+      1 energy) <b>(7)</b>
+    </li>
+    <li>fractured slips snek to replay flowing power</li>
+    <li>
+      snek flowing powers due, due impends resounding footfalls with 2 energy
+      (due has 0 energy) <b>(8)</b>
+    </li>
+    <li>fractured slips snek to replay flowing power</li>
+    <li>
+      snek flowing powers due, due impends its last card in hand <b>(9)</b>
+    </li>
+  </ul>
+  <p>
+    all 9 of these impending cards will come into play on turn 2. except that
+    there will only be like 4 quake tokens to use with the right innate.
+  </p>
+</div>
+
+<h2>section 3: other stuff</h2>
+
+<p>how much energy can a single spirit get on turn 1?</p>
+
+<button type="button" class="collapsible">energy</button>
+<div class="content">
+  <p>
+    strategy: get mentor to play 4 cards, then repeatedly play boon of vigor
+  </p>
+  <p>spirits:</p>
+  <ul>
+    <li>mentor (or any other memory, it doesn't matter)</li>
+    <li>river</li>
+    <li>fractured</li>
+    <li>snek</li>
+    <li>downpour</li>
+    <li>might</li>
+  </ul>
+  <p>growth:</p>
+  <ul>
+    <li>mentor gains 9 energy, plays teachings <b>(9)</b></li>
+    <li>river does anything, plays boon of vigor</li>
+    <li>fractured takes sun growth, plays blur + past returns</li>
+    <li>snek gains 4 energy, plays flowing power</li>
+    <li>downpour does anything, plays abundance</li>
+    <li>might gains 2 energy, plays rituals</li>
+  </ul>
+  <p>fast:</p>
+  <ul>
+    <li>downpour gives snek abundance</li>
+    <li>might uses might innate to play draw, then gift of strengths snek</li>
+    <li>mentor teaches fractured air</li>
+    <li>snek lets mentor play share secrets <b>(10)</b></li>
+    <li>snek lets mentor play study (abundance) <b>(11)</b></li>
+    <li>snek lets mentor play memes (strength) <b>(11)</b></li>
+    <li>river vigors mentor <b>(15)</b></li>
+    <li>fractured slips river to replay vigor</li>
+    <li>river vigors mentor <b>(19)</b></li>
+    <li>fractured slips river to replay vigor</li>
+    <li>river vigors mentor <b>(23)</b></li>
+    <li>fractured slips river to replay vigor</li>
+    <li>river vigors mentor <b>(27)</b></li>
+  </ul>
+</div>
+
+{%-include spoilers.html -%}
