@@ -6,6 +6,10 @@ entries:
     entries:
       - title: about me
         url: about
+      - title: spirit island theory
+        url: si_theory
+      - title: puzzle stuff
+        url: puzzles
     #  - title: a (nearly) no-CSS, fast, minimalist Jekyll theme.
     #  - title: github repo
     #    url: https://github.com/riggraz/no-style-please
@@ -13,17 +17,17 @@ entries:
 
   - title: all posts
     post_list:
-      limit: 5
+      limit: 10
       show_more: true
       show_more_text: look deeper into the archives...
       show_more_url: archive.html
 
-  - title: puzzles
-    post_list:
-      category: puzzles
-      show_more: true
-      show_more_text: look for more ancient puzzles...
-      show_more_url: puzzles.html
+  #  - title: puzzles
+  #    post_list:
+  #      category: puzzles
+  #      show_more: true
+  #      show_more_text: look for more ancient puzzles...
+  #      show_more_url: puzzles.html
 
   - title: rss
     url: feed.xml
