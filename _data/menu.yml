@@ -6,9 +6,9 @@ entries:
     entries:
       - title: about me
         url: about
-      - title: spirit island theory
+      - title: spirit island
         url: si_theory
-      - title: puzzle stuff
+      - title: puzzles
         url: puzzles
     #  - title: a (nearly) no-CSS, fast, minimalist Jekyll theme.
     #  - title: github repo
